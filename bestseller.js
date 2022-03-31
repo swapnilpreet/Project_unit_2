@@ -158,5 +158,5 @@ var cartData = JSON.parse(localStorage.getItem("cart")) || [];
     console.log(elem);
     cartData.push(elem);
     localStorage.setItem("cart", JSON.stringify(cartData));
-    alert("item added to cart");
+    // alert("item added to cart"),
   }
