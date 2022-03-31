@@ -1,6 +1,7 @@
-h1 {
+#consultant,.cons{
   text-align: center;
   font-family: serif;
+  margin-top:3%;
   font-weight: 500;
   font-style: normal;
   line-height: 38px;
@@ -8,7 +9,7 @@ h1 {
   font-size: 30px;
   letter-spacing: 0.1rem;
 }
-p {
+#info,.info2 {
   width: 60%;
   margin: auto;
   text-align: center;
@@ -16,7 +17,7 @@ p {
   font-weight: 400;
   font-style: normal;
   letter-spacing: 0.5px;
-  line-height: 30px;
+  line-height: 34px;
   color: #222222;
   font-size: 18px;
 }
@@ -41,9 +42,9 @@ p {
   font-size: 18px;
   line-height: 26px;
 }
-#content div > p {
+ .info2 {
   font-size: 14px;
-  line-height: 22px;
+  line-height: 24px;
   width: 70%;
   letter-spacing: 0.7px;
 }
@@ -72,7 +73,7 @@ button {
 button:hover {
   cursor: pointer;
 }
-#box2 button {
+#con2 button {
   color: #222222;
   background-color: white;
   border: 1px solid #222222;
@@ -129,8 +130,9 @@ button:hover {
 
 /* login css start */
 
-label,
-a {
+/* a */
+label, label+a
+ {
   font-size: 10px;
   color: #8a8a8a;
   letter-spacing: 0.5px;
@@ -138,7 +140,7 @@ a {
   font-family: Arial, Helvetica, sans-serif;
   margin-left: 15px;
 }
-a {
+ label a{
   text-decoration: none;
   color: blue;
 }
@@ -172,17 +174,17 @@ form {
 }
 #term p {
   display: inline;
-  font-size: 12px;
+  font-size: 14px;
   color: #8a8a8a;
 }
 #term {
   width: 90%;
   margin: auto;
-  line-height: 6px;
-  word-spacing: none;
+  margin-top: 4%;
+  line-height:16px;
 }
 #term > a {
   text-decoration: underline;
-  font-size: 12px;
+  font-size: 14px;
   word-spacing: none;
 }

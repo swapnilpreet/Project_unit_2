@@ -5,12 +5,16 @@ p {
   color: #222222;
   font-weight: lighter;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 10px;
+}
+#hed_id{
+
+  margin-top:3%;
 }
 #s_phrase {
   width: 55%;
   margin: auto;
-  margin-top: -15px;
+  margin-top: 1%;
   font-size: 20px;
   font-family: Serif;
   line-height: 24px;

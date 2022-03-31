@@ -33,10 +33,16 @@ strong {
   padding-top: 20px;
   border-bottom: 0.4px solid #272829;
 }
+.box2 div a{
+  text-decoration: none;
+}
 .box2 > div {
   height: 30px;
   width: 200px;
   /* border: 0.5px solid red; */
+}
+.box2 img:hover{
+ cursor: pointer;
 }
 .menu_box {
   display: flex;
@@ -54,6 +60,10 @@ strong {
   word-spacing: 1.5px;
 }
 /* //code by dipak */
+
+#log:hover{
+  display: block;
+}
 .logo:hover {
   cursor: pointer;
 }
@@ -81,7 +91,7 @@ strong {
   display: flex;
   justify-content: space-around;
 }
-a {
+.box3 .child-box a {
   text-decoration: none;
 }
 .banner {
