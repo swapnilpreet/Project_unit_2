@@ -91,6 +91,27 @@ h4 {
   font-weight: 400;
   word-spacing: 1.5px;
 }
+
+
+
+ 
+.nav-link::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: #009688;
+  position: absolute;
+  left: 0;
+
+  bottom: -10px;
+  transition: 0.5s;
+  }
+  
+  .nav-link:hover::after {
+  width:100%;
+  }
+
+
 .dropdown-item {
   color: #272829;
   letter-spacing: 0.6px;
