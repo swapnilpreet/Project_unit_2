@@ -7,7 +7,10 @@
 .header {
   overflow: hidden;
 }
-
+.nav-item{
+  list-style: none;
+  margin-right: 10px;
+}
 /* code by dipak */
 .box2 a {
   text-decoration: none;
