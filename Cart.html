@@ -15,9 +15,8 @@
     <div id="overviewcart">
       <div id="cartHead">
         <span><i class="fa-solid fa-bag-shopping"></i></span>
-
         <span>Your Bag</span>
-        <span> <i class="fa-solid fa-xmark"></i></span>
+        <span> <i class="fa-solid fa-xmark" id="cross"></i></span>
       </div>
       <hr />
       <div id="cartItem"></div>
@@ -76,6 +75,14 @@
 
     document.querySelector("#cartItem").append(box);
   });
-
+  document.querySelector("#cross").addEventListener("click", cancleFunction);
+  function cancleFunction(){
+    document.querySelector("#overviewcart").innerHTML = "";
+    window.location.href="index.html";
+  }
+  document.querySelector("#check").addEventListener("click", checkFunction);
+  function checkFunction(){
+    window.location.href="OrderConfirmPage.html";
+  }
  
 </script>
