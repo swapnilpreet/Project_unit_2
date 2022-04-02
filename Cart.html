@@ -49,6 +49,8 @@
   },0)
   document.querySelector("#amt").innerHTML = '$'+total;
   
+  localStorage.setItem("cartTotalVal", JSON.stringify(total));
+  
   cartData.map(function (elem, index) {
     var box = document.createElement("div");
     box.setAttribute("id", "cartdiv");
