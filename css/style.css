@@ -12,6 +12,9 @@
 .box2 a {
   text-decoration: none;
 }
+#menu_box{
+  width: 250px;
+}
 .menu_box > div > a {
   color: black;
 }
