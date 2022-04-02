@@ -146,7 +146,7 @@ var cartData = JSON.parse(localStorage.getItem("cart")) || [];
     
 
     btn.addEventListener("click", function () {
-      addToCart(elem);
+     // addToCart(elem);
     });
 
     box.append(img, product, price, btn);

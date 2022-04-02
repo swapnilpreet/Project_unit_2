@@ -114,43 +114,63 @@ var offerObj = [
   // },
 ];
 
-//map to body
-offerObj.map(function (element) {
-  var Offer_box = document.createElement("div");
+var cartData = JSON.parse(localStorage.getItem("cart")) || [];
 
-  var img = document.createElement("img");
-  img.src = element.image;
-  img.setAttribute("id", "product_img");
-
-  var prod_name = document.createElement("p");
-  prod_name.textContent = element.name;
-  prod_name.setAttribute("id", "prod_name");
-
-  var price_box = document.createElement("div");
-  price_box.setAttribute("id", "price_box");
-
-  var prod_price1 = document.createElement("span");
-  prod_price1.textContent = element.price;
-  prod_price1.setAttribute("class", "prod_price");
-
-  var silder = document.createElement("span");
-  silder.textContent = element.silder;
-  silder.setAttribute("id", "silder");
-
-  var prod_price2 = document.createElement("span");
-  prod_price2.textContent = element.price2;
-  prod_price2.setAttribute("class", "prod_price2");
-
-  var chunk = document.createElement("span");
-  chunk.textContent = element.chunk;
-  chunk.setAttribute("id", "chunk");
-
-  price_box.append(prod_price1, silder, prod_price2, chunk);
-  var btn1 = document.createElement("button");
-  btn1.textContent = "ADD  TO  BAG";
-  btn1.style.backgroundColor = "white";
-  btn1.setAttribute("id", "btn_add");
-
-  Offer_box.append(img, prod_name, price_box, btn1);
-  document.querySelector("#container").append(Offer_box);
+window.addEventListener("load", function () {
+  displayData(offerObj);
 });
+//map to body
+function displayData(offerObj) {
+  document.querySelector("#container").innerHTML = "";
+
+  offerObj.map(function (element) {
+    var Offer_box = document.createElement("div");
+  
+    var img = document.createElement("img");
+    img.src = element.image;
+    img.setAttribute("id", "product_img");
+  
+    var prod_name = document.createElement("p");
+    prod_name.textContent = element.name;
+    prod_name.setAttribute("id", "prod_name");
+  
+    var price_box = document.createElement("div");
+    price_box.setAttribute("id", "price_box");
+  
+    var prod_price1 = document.createElement("span");
+    prod_price1.textContent = element.price;
+    prod_price1.setAttribute("class", "prod_price");
+  
+    var silder = document.createElement("span");
+    silder.textContent = element.silder;
+    silder.setAttribute("id", "silder");
+  
+    var prod_price2 = document.createElement("span");
+    prod_price2.textContent = element.price2;
+    prod_price2.setAttribute("class", "prod_price2");
+  
+    var chunk = document.createElement("span");
+    chunk.textContent = element.chunk;
+    chunk.setAttribute("id", "chunk");
+  
+    price_box.append(prod_price1, silder, prod_price2, chunk);
+    var btn1 = document.createElement("button");
+    btn1.textContent = "ADD  TO  BAG";
+    btn1.style.backgroundColor = "white";
+    btn1.setAttribute("id", "btn_add");
+    btn1.addEventListener("click", function () {
+      addToCart(element);
+    });
+  
+    Offer_box.append(img, prod_name, price_box, btn1);
+    document.querySelector("#container").append(Offer_box);
+  });
+}
+
+//add to cart 
+function addToCart(element) {
+  console.log(element);
+  cartData.push(element);
+  localStorage.setItem("cart", JSON.stringify(cartData));
+  //alert("item added to cart");
+}
